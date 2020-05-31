@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:ff="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:ff1="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:helpers="clr-namespace:Nike.Helpers"
+             ios:Page.UseSafeArea="True"  BackgroundColor="#F7F7F7"
+             mc:Ignorable="d" x:Class="Nike.View.MainPage">
+
+    <Grid RowSpacing="0"> 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" BackgroundColor="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Button Margin="15" FontSize="25" BackgroundColor="#F7F7F7"  HorizontalOptions="StartAndExpand" Text="{x:Static helpers:IconFont.KeyboardBackspace}" FontFamily="{StaticResource MaterialFontFamily}" TextColor="{StaticResource Black}" />
+            <Button Grid.Column="1" HorizontalOptions="EndAndExpand" Margin="15" BackgroundColor="#F7F7F7" FontSize="25" Text="{x:Static helpers:IconFont.BookmarkCheck}" FontFamily="{StaticResource MaterialFontFamily}" TextColor="{StaticResource Black}" />
+        </Grid>
+
+        <ScrollView Grid.Row="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="400"/>
+                    <RowDefinition Height="400"/>
+                </Grid.RowDefinitions>
+                <ff:SvgCachedImage Margin="-300,0,0,0" Grid.Row="0" Source="resource://ProductEllipse.svg"/>
+
+                <Grid Grid.Row="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button Margin="-60,0,0,0" BackgroundColor="White" Padding="15" CornerRadius="45" HorizontalOptions="Center" Text="₺45" FontSize="35" FontFamily="{StaticResource FuturaBold}" TextColor="{StaticResource Black}" />
+                    <ff1:CachedImage Grid.Row="1" Source="resource://NikePreview.png" Aspect="AspectFill"/>
+
+                </Grid>
+                 
+                <Grid Grid.Row="1" >
+                    <Frame CornerRadius="30" HasShadow="False" BackgroundColor="{StaticResource White}" >
+                        <Grid RowSpacing="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="55"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="120"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!--URUN ADI / SEPET-->
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                                <Label VerticalTextAlignment="Center" Text="Nick Air Max" FontSize="23" TextColor="{StaticResource Black}" FontFamily="{StaticResource FuturaBold}"/>
+
+                                <Button Grid.Column="1" FontFamily="{StaticResource FuturaBold}" BorderColor="#DDDEE2" BorderWidth="1" CornerRadius="10" BackgroundColor="White" FontSize="10" TextColor="#434670" Text="ADD TO BAG"/>
+                            </Grid>
+
+                            <!--STAR / ORANLAMA-->
+                            <Grid Grid.Row="1" ColumnSpacing="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="45"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="80"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" Text="{x:Static helpers:IconFont.Star}" FontFamily="{StaticResource MaterialFontFamily}" BackgroundColor="White" TextColor="#FFBA00" FontSize="20"/>
+                                <Button Grid.Column="1" Text="{x:Static helpers:IconFont.Star}" FontFamily="{StaticResource MaterialFontFamily}" BackgroundColor="White" TextColor="#FFBA00" FontSize="20"/>
+                                <Button Grid.Column="2" Text="{x:Static helpers:IconFont.Star}" FontFamily="{StaticResource MaterialFontFamily}" BackgroundColor="White" TextColor="#FFBA00" FontSize="20"/>
+                                <Button Grid.Column="3" Text="{x:Static helpers:IconFont.Star}" FontFamily="{StaticResource MaterialFontFamily}" BackgroundColor="White" TextColor="#FFBA00" FontSize="20"/>
+                                <Button Grid.Column="4" Text="{x:Static helpers:IconFont.Star}" FontFamily="{StaticResource MaterialFontFamily}" BackgroundColor="White" TextColor="#A3A3A3" FontSize="20"/>
+                                <Button Margin="10,0,0,0" Grid.Column="5" Text="4.1 | (340)" FontFamily="{StaticResource font_normal}" BackgroundColor="{StaticResource Blue}" TextColor="White" FontSize="10.5" CornerRadius="3"/>
+                            </Grid>
+
+                            <!--URUN ACIKLAMA-->
+                            <Grid Grid.Row="2">
+                                <Label TextColor="#282C40" Opacity="0.38" Text="The Nike GTX shoe borrows design lines from the heritage runners the Nike React tech." FontSize="16" FontFamily="{StaticResource font_normal}"/>
+                            </Grid>
+
+                            <!--SIZE-->
+                            <Grid Grid.Row="3" ColumnSpacing="19">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="49"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+
+                                <Label VerticalTextAlignment="Center" Text="Size" FontSize="16" TextColor="{StaticResource Black}" FontFamily="{StaticResource FuturaBold}"/>
+                                <Button Grid.Row="1" Grid.Column="0" BackgroundColor="White" Text="5.5" FontSize="14" BorderColor="#DDDEE2" BorderWidth="1" CornerRadius="10" TextColor="{StaticResource button_size}" FontFamily="{StaticResource FuturaBold}"/>
+                                <Button Grid.Row="1" Grid.Column="1" BackgroundColor="White" Text="6" FontSize="14" BorderColor="#DDDEE2" BorderWidth="1" CornerRadius="10" TextColor="{StaticResource button_size}" FontFamily="{StaticResource FuturaBold}"/>
+                                <Button Grid.Row="1" Grid.Column="2" BackgroundColor="White" Text="6.5" FontSize="14" BorderColor="#DDDEE2" BorderWidth="1" CornerRadius="10" TextColor="{StaticResource button_size}" FontFamily="{StaticResource FuturaBold}"/>
+                                <Button Grid.Row="1" Grid.Column="3" Text="7" FontSize="14" CornerRadius="10" BackgroundColor="{StaticResource Blue}" TextColor="{StaticResource White}" FontFamily="{StaticResource FuturaBold}"/>
+                                <Button Grid.Row="1" Grid.Column="4" BackgroundColor="White" Text="7.5" FontSize="14" BorderColor="#DDDEE2" BorderWidth="1" CornerRadius="10" TextColor="{StaticResource button_size}" FontFamily="{StaticResource FuturaBold}"/>
+
+                            </Grid>
+
+                            <!--COLOUR SHOWN-->
+                            <Grid Grid.Row="4" ColumnSpacing="19">
+                                <Label VerticalTextAlignment="Center" Text="Colour Shown" FontSize="16" TextColor="{StaticResource Black}" FontFamily="{StaticResource FuturaBold}"/>
+                                <Label Grid.Row="1" VerticalTextAlignment="Center" Text="White/Navy Blue" FontSize="14" TextColor="#DDDEE2" FontFamily="{StaticResource font_normal}"/>
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                </Grid>
+
+            </Grid>
+
+
+        </ScrollView>
+
+        <Button Grid.Row="2" HeightRequest="70" VerticalOptions="EndAndExpand" Text="BUY NOW" BackgroundColor="#5780D9" CornerRadius="0" FontSize="17" TextColor="{StaticResource White}" FontFamily="{StaticResource FuturaBold}" />
+
+    </Grid>
+</ContentPage>

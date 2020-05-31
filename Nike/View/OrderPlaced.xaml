@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:helpers="clr-namespace:Nike.Helpers"
+             x:Class="Nike.View.OrderPlaced">
+
+    <Grid BackgroundColor="{StaticResource Blue}" >
+        <Grid HorizontalOptions="Center" VerticalOptions="Center" >
+            <Label TextColor="White" HorizontalTextAlignment="Center" FontSize="50" Text="{x:Static helpers:IconFont.CheckCircle}" FontFamily="{StaticResource MaterialFontFamily}"/>
+            <Label Grid.Row="1" TextColor="White" FontSize="20" Text="ORDER PLACED" FontFamily="{StaticResource FuturaBold}"/>
+             
+        </Grid>
+    </Grid>
+</ContentPage>

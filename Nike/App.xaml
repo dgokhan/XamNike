@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Nike.App">
+    <Application.Resources>
+
+        <Color x:Key="Blue">#5780D9</Color>
+        <Color x:Key="Gray">#696C79</Color>
+        <Color x:Key="White">#FFFFFF</Color>
+        <Color x:Key="Black">#282C40</Color>
+        <Color x:Key="button_size">#CBCBCB</Color>
+
+       <OnPlatform x:TypeArguments="x:String" x:Key="MaterialFontFamily">
+            <On Platform="iOS" Value="Material Design Icons" />
+            <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
+        </OnPlatform>
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="FuturaBold">
+            <On Platform="iOS" Value="Futura-Bold" />
+            <On Platform="Android" Value="FuturaBold.otf#Bold" />
+        </OnPlatform>
+
+        <OnPlatform x:Key="font_black" x:TypeArguments="x:String">
+            <On Platform="Android" Value="SofiaProBlack.otf#SofiaPro-Black" />
+            <On Platform="iOS" Value="SofiaPro-Black" />
+        </OnPlatform>
+        <OnPlatform x:Key="font_bold" x:TypeArguments="x:String">
+            <On Platform="Android" Value="SofiaProBold.otf#SofiaPro-Bold" />
+            <On Platform="iOS" Value="SofiaPro-Bold" />
+        </OnPlatform>
+        <OnPlatform x:Key="font_normal" x:TypeArguments="x:String">
+            <On Platform="Android" Value="SofiaProRegular.otf#SofiaProRegular" />
+            <On Platform="iOS" Value="SofiaProRegular" />
+        </OnPlatform>
+
+    </Application.Resources>
+</Application>
